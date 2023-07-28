@@ -43,6 +43,8 @@ dependencies:
   flutter_svg_provider: ^1.0.3
   firebase_core: ^2.15.0
   firebase_auth: ^4.7.1
+  math_expressions: ^2.1.0
+  table_calendar: ^3.0.3
 
 
 dev_dependencies:

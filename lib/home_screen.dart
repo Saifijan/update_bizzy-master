@@ -2,6 +2,8 @@
 // import 'package:bizzyupdated/utils/app_colors.dart';
 // import 'package:bizzyupdated/utils/app_util.dart';
 // import 'package:bizzyupdated/widgets/elevated_button_g.dart';
+import 'package:bizzyupdated/Calculator_App.dart';
+import 'package:bizzyupdated/CalendarApp.dart';
 import 'package:bizzyupdated/screen_3.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -29,7 +31,12 @@ class HomeScreen extends StatelessWidget {
                     scale: 1.1,
                     child: IconButton(
                       onPressed: () {
-                        // Handle center icon button tap
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CalendarApp(),
+                          ),
+                        );
                       },
                       icon: Image.asset('assets/images/calender.png'),
                     ),
@@ -125,7 +132,14 @@ class HomeScreen extends StatelessWidget {
                     Transform.scale(
                       scale: 0.9,
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Calculator_App(),
+                            ),
+                          );
+                        },
                         icon: Image.asset('assets/images/play.png'),
                       ),
                     ),
@@ -161,7 +175,14 @@ class HomeScreen extends StatelessWidget {
             Transform.scale(
               scale: 0.8,
               child: IconButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Calculator_App(),
+                    ),
+                  );
+                },
                 icon: Image.asset('assets/images/search.png'),
               ),
             ),
@@ -169,7 +190,6 @@ class HomeScreen extends StatelessWidget {
               scale: 1.2,
               child: IconButton(
                 onPressed: (){
-
                 },
                 icon: Image.asset('assets/images/gym.png'),
               ),
@@ -177,7 +197,9 @@ class HomeScreen extends StatelessWidget {
             Transform.scale(
               scale: 0.7,
               child: IconButton(
-                onPressed: (){},
+                onPressed: (){
+
+                },
                 icon: Image.asset('assets/images/restaurant.png'),
               ),
             ),

@@ -2,7 +2,8 @@
 // import 'package:bizzyupdated/utils/app_colors.dart';
 // import 'package:bizzyupdated/utils/app_util.dart';
 // import 'package:bizzyupdated/widgets/elevated_button_g.dart';
-import 'package:bizzyupdated/SignIn_Screen.dart';
+import 'package:bizzyupdated/Calculator_App.dart';
+import 'package:bizzyupdated/CalendarApp.dart';
 import 'package:bizzyupdated/home_screen.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -30,7 +31,12 @@ class screen_3 extends StatelessWidget {
                     scale: 1.1,
                     child: IconButton(
                       onPressed: () {
-                        // Handle center icon button tap
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CalendarApp(),
+                          ),
+                        );
                       },
                       icon: Image.asset('assets/images/calender.png'),
                     ),
@@ -51,7 +57,7 @@ class screen_3 extends StatelessWidget {
                   scale: 1.1,
                   child: IconButton(
                     onPressed: () {
-                      // Handle center icon button tap
+
                     },
                     icon: Image.asset('assets/images/time.png'),
                   ),
@@ -158,14 +164,23 @@ class screen_3 extends StatelessWidget {
             Transform.scale(
               scale: 0.8,
               child: IconButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Calculator_App(),
+                    ),
+                  );
+                },
                 icon: Image.asset('assets/images/search.png'),
               ),
             ),
             Transform.scale(
               scale: 1.2,
               child: IconButton(
-                onPressed: (){},
+                onPressed: (){
+
+                },
                 icon: Image.asset('assets/images/gym.png'),
               ),
             ),
