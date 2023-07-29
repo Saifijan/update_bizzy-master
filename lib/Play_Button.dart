@@ -5,16 +5,16 @@
 import 'package:bizzyupdated/Calculator_App.dart';
 import 'package:bizzyupdated/CalendarApp.dart';
 import 'package:bizzyupdated/FinanceApp.dart';
+import 'package:bizzyupdated/FitnessApp.dart';
 import 'package:bizzyupdated/NutritionApp.dart';
-import 'package:bizzyupdated/Play_Button.dart';
 import 'package:bizzyupdated/home_screen.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 // import 'SignIn_Screen.dart';
 
-class FitnessApp extends StatelessWidget {
-  const FitnessApp({Key? key}) : super(key: key);
+class Play_Button extends StatelessWidget {
+  const Play_Button({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -90,14 +90,56 @@ class FitnessApp extends StatelessWidget {
 
       body: Column(
           children: [
+            Align(
+              alignment: Alignment.center,
+              child : Stack(
+                children: [
+                  Image.asset(
+                    'assets/images/back2.png',
+                    fit: BoxFit.cover,
 
+                    // Adjust other properties of the Image widget as needed
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Transform.scale(
+                        scale: 0.8,
+                        child: IconButton(
+                          onPressed: () {
+                            Get.to(home_screen());
+                          },
+                          icon: Image.asset('assets/images/todo1.png'),
+                        ),
+                      ),
+                      Transform.scale(
+                        scale: 0.7,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Image.asset('assets/images/camera.png'),
+                        ),
+                      ),
+                      Transform.scale(
+                        scale: 0.9,
+                        child: IconButton(
+                          onPressed: () {
+                            Get.to(Play_Button());
+                          },
+                          icon: Image.asset('assets/images/play.png'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
             Expanded(
               child: FractionalTranslation(
                 translation: const Offset(-0.0, -0.075),
                 child: Image.asset(
-                  'assets/images/gym_button.jpg', // Replace with your image asset path
-                  width: 400, // Adjust the width as needed
-                  height: 300,
+                  'assets/images/play_button.jpg', // Replace with your image asset path
+                  width: 380, // Adjust the width as needed
+                  height: 250,
 
                 ),
               ),
@@ -119,7 +161,7 @@ class FitnessApp extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const Calculator_App());
+                  Get.to(Calculator_App());
                 },
                 icon: Image.asset('assets/images/search.png'),
               ),
@@ -128,7 +170,7 @@ class FitnessApp extends StatelessWidget {
               scale: 1.2,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const FitnessApp());
+                  Get.to(FitnessApp());
 
                 },
                 icon: Image.asset('assets/images/gym.png'),
@@ -138,7 +180,7 @@ class FitnessApp extends StatelessWidget {
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const NutritionApp());
+                  Get.to(NutritionApp());
                 },
                 icon: Image.asset('assets/images/restaurant.png'),
               ),
@@ -147,7 +189,7 @@ class FitnessApp extends StatelessWidget {
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const FinanceApp());
+                  Get.to(FinanceApp());
                 },
                 icon: Image.asset('assets/images/dollar sign.png'),
               ),
