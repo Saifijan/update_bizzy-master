@@ -5,15 +5,15 @@
 import 'package:bizzyupdated/CalendarApp.dart';
 import 'package:bizzyupdated/FinanceApp.dart';
 import 'package:bizzyupdated/FitnessApp.dart';
-import 'package:bizzyupdated/Search_button.dart';
+import 'package:bizzyupdated/NutritionApp.dart';
 import 'package:bizzyupdated/screen_3.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 // import 'SignIn_Screen.dart';
 
-class NutritionApp extends StatelessWidget {
-  const NutritionApp({Key? key}) : super(key: key);
+class Search_button extends StatelessWidget {
+  const Search_button({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -92,11 +92,11 @@ class NutritionApp extends StatelessWidget {
 
             Expanded(
               child: FractionalTranslation(
-                translation: const Offset(-0.0, -0.18),
+                translation: const Offset(-0.0, -0.435),
                 child: Image.asset(
-                  'assets/images/Nutrition_button.jpg', // Replace with your image asset path
+                  'assets/images/Search_pic.jpg', // Replace with your image asset path
                   width: 400, // Adjust the width as needed
-                  height: 500,
+                  height: 300,
 
                 ),
               ),
@@ -111,7 +111,7 @@ class NutritionApp extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const screen_3());
+                  Get.to(screen_3());
                 },
                 icon: Image.asset('assets/images/Home_icon1.png'),
               ),
@@ -120,16 +120,16 @@ class NutritionApp extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const Search_button());
+                  Get.to(Search_button());
                 },
-                icon: Image.asset('assets/images/search_icon1.png'),
+                icon: Image.asset('assets/images/search_icon2.png'),
               ),
             ),
             Transform.scale(
               scale: 1.2,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const FitnessApp());
+                  Get.to(FitnessApp());
 
                 },
                 icon: Image.asset('assets/images/gym_icon1.png'),
@@ -139,16 +139,16 @@ class NutritionApp extends StatelessWidget {
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const NutritionApp());
+                  Get.to(NutritionApp());
                 },
-                icon: Image.asset('assets/images/res_icon2.png'),
+                icon: Image.asset('assets/images/res_icon1.png'),
               ),
             ),
             Transform.scale(
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(const FinanceApp());
+                  Get.to(FinanceApp());
                 },
                 icon: Image.asset('assets/images/exp_icon1.png'),
               ),

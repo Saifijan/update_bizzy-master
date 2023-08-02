@@ -2,12 +2,12 @@
 // import 'package:bizzyupdated/utils/app_colors.dart';
 // import 'package:bizzyupdated/utils/app_util.dart';
 // import 'package:bizzyupdated/widgets/elevated_button_g.dart';
-import 'package:bizzyupdated/Calculator_App.dart';
 import 'package:bizzyupdated/CalendarApp.dart';
 import 'package:bizzyupdated/FinanceApp.dart';
 import 'package:bizzyupdated/FitnessApp.dart';
 import 'package:bizzyupdated/NutritionApp.dart';
 import 'package:bizzyupdated/Play_Button.dart';
+import 'package:bizzyupdated/Search_button.dart';
 import 'package:bizzyupdated/home_screen.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -108,7 +108,7 @@ class screen_3 extends StatelessWidget {
                         scale: 0.8,
                         child: IconButton(
                           onPressed: () {
-                            Get.to(home_screen());
+                            Get.to(const home_screen());
                             // Navigator.pushReplacement(
                             //   context,
                             //   MaterialPageRoute(
@@ -116,23 +116,25 @@ class screen_3 extends StatelessWidget {
                             //   ),
                             // );
                           },
-                          icon: Image.asset('assets/images/todo1.png'),
+                          icon: Image.asset('assets/images/todo_icon1.png'),
                         ),
                       ),
                       Transform.scale(
-                        scale: 0.7,
+                        scale: 0.8,
                         child: IconButton(
-                          onPressed: () {},
-                          icon: Image.asset('assets/images/camera.png'),
+                          onPressed: () {
+                            Get.to(const screen_3());
+                          },
+                          icon: Image.asset('assets/images/camera_icon2.png'),
                         ),
                       ),
                       Transform.scale(
                         scale: 0.9,
                         child: IconButton(
                           onPressed: () {
-                            Get.to(Play_Button());
+                            Get.to(const Play_Button());
                           },
-                          icon: Image.asset('assets/images/play.png'),
+                          icon: Image.asset('assets/images/play_icon1.png'),
                         ),
                       ),
                     ],
@@ -159,45 +161,47 @@ class screen_3 extends StatelessWidget {
             Transform.scale(
               scale: 0.8,
               child: IconButton(
-                onPressed: (){},
-                icon: Image.asset('assets/images/home.png'),
+                onPressed: (){
+                  Get.to(const screen_3());
+                },
+                icon: Image.asset('assets/images/Home_icon2.png'),
               ),
             ),
             Transform.scale(
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(Calculator_App());
+                  Get.to(const Search_button());
                 },
-                icon: Image.asset('assets/images/search.png'),
+                icon: Image.asset('assets/images/search_icon1.png'),
               ),
             ),
             Transform.scale(
               scale: 1.2,
               child: IconButton(
                 onPressed: (){
-                  Get.to(FitnessApp());
+                  Get.to(const FitnessApp());
 
                 },
-                icon: Image.asset('assets/images/gym.png'),
+                icon: Image.asset('assets/images/gym_icon1.png'),
               ),
             ),
             Transform.scale(
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(NutritionApp());
+                  Get.to(const NutritionApp());
                 },
-                icon: Image.asset('assets/images/restaurant.png'),
+                icon: Image.asset('assets/images/res_icon1.png'),
               ),
             ),
             Transform.scale(
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(FinanceApp());
+                  Get.to(const FinanceApp());
                 },
-                icon: Image.asset('assets/images/dollar sign.png'),
+                icon: Image.asset('assets/images/exp_icon1.png'),
               ),
             ),
           ],

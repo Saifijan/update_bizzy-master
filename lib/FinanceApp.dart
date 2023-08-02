@@ -2,12 +2,11 @@
 // import 'package:bizzyupdated/utils/app_colors.dart';
 // import 'package:bizzyupdated/utils/app_util.dart';
 // import 'package:bizzyupdated/widgets/elevated_button_g.dart';
-import 'package:bizzyupdated/Calculator_App.dart';
 import 'package:bizzyupdated/CalendarApp.dart';
 import 'package:bizzyupdated/FitnessApp.dart';
 import 'package:bizzyupdated/NutritionApp.dart';
-import 'package:bizzyupdated/Play_Button.dart';
-import 'package:bizzyupdated/home_screen.dart';
+import 'package:bizzyupdated/Search_button.dart';
+import 'package:bizzyupdated/screen_3.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -93,9 +92,9 @@ class FinanceApp extends StatelessWidget {
 
             Expanded(
               child: FractionalTranslation(
-                translation: const Offset(-0.0, -0.38),
+                translation: const Offset(-0.0, -0.34),
                 child: Image.asset(
-                  'assets/images/expense_button.jpg', // Replace with your image asset path
+                  'assets/images/expense_pic.jpg', // Replace with your image asset path
                   width: 400, // Adjust the width as needed
                   height: 300,
 
@@ -111,17 +110,19 @@ class FinanceApp extends StatelessWidget {
             Transform.scale(
               scale: 0.8,
               child: IconButton(
-                onPressed: (){},
-                icon: Image.asset('assets/images/home.png'),
+                onPressed: (){
+                  Get.to(screen_3());
+                },
+                icon: Image.asset('assets/images/Home_icon1.png'),
               ),
             ),
             Transform.scale(
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(Calculator_App());
+                  Get.to(Search_button());
                 },
-                icon: Image.asset('assets/images/search.png'),
+                icon: Image.asset('assets/images/search_icon1.png'),
               ),
             ),
             Transform.scale(
@@ -131,7 +132,7 @@ class FinanceApp extends StatelessWidget {
                   Get.to(FitnessApp());
 
                 },
-                icon: Image.asset('assets/images/gym.png'),
+                icon: Image.asset('assets/images/gym_icon1.png'),
               ),
             ),
             Transform.scale(
@@ -140,7 +141,7 @@ class FinanceApp extends StatelessWidget {
                 onPressed: (){
                   Get.to(NutritionApp());
                 },
-                icon: Image.asset('assets/images/restaurant.png'),
+                icon: Image.asset('assets/images/res_icon1.png'),
               ),
             ),
             Transform.scale(
@@ -149,7 +150,7 @@ class FinanceApp extends StatelessWidget {
                 onPressed: (){
                   Get.to(FinanceApp());
                 },
-                icon: Image.asset('assets/images/dollar sign.png'),
+                icon: Image.asset('assets/images/exp_icon2.png'),
               ),
             ),
           ],

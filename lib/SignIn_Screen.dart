@@ -3,7 +3,6 @@ import 'package:bizzyupdated/screen_3.dart';
 import 'package:bizzyupdated/widgets/elevated_button_g.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'home_screen.dart';
 
 
 class SignInScreen extends StatefulWidget {
