@@ -33,7 +33,7 @@ class Search_button extends StatelessWidget {
                     scale: 1.1,
                     child: IconButton(
                       onPressed: () {
-                        Get.to(CalendarApp());
+                        Get.off(CalendarApp());
                       },
                       icon: Image.asset('assets/images/calender.png'),
                     ),
@@ -111,7 +111,7 @@ class Search_button extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(screen_3());
+                  Get.off(screen_3());
                 },
                 icon: Image.asset('assets/images/Home_icon1.png'),
               ),
@@ -120,7 +120,7 @@ class Search_button extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(Search_button());
+                  Get.off(Search_button());
                 },
                 icon: Image.asset('assets/images/search_icon2.png'),
               ),
@@ -129,7 +129,7 @@ class Search_button extends StatelessWidget {
               scale: 1.2,
               child: IconButton(
                 onPressed: (){
-                  Get.to(FitnessApp());
+                  Get.off(FitnessApp());
 
                 },
                 icon: Image.asset('assets/images/gym_icon1.png'),
@@ -139,7 +139,7 @@ class Search_button extends StatelessWidget {
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(NutritionApp());
+                  Get.off(NutritionApp());
                 },
                 icon: Image.asset('assets/images/res_icon1.png'),
               ),
@@ -148,7 +148,7 @@ class Search_button extends StatelessWidget {
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(FinanceApp());
+                  Get.off(FinanceApp());
                 },
                 icon: Image.asset('assets/images/exp_icon1.png'),
               ),

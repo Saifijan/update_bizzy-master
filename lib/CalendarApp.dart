@@ -1,4 +1,9 @@
 import 'package:bizzyupdated/Calculator_App.dart';
+import 'package:bizzyupdated/FinanceApp.dart';
+import 'package:bizzyupdated/FitnessApp.dart';
+import 'package:bizzyupdated/NutritionApp.dart';
+import 'package:bizzyupdated/Search_Button.dart';
+import 'package:bizzyupdated/screen_3.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -130,45 +135,72 @@ class _CalendarAppState extends State<CalendarApp> {
               Transform.scale(
                 scale: 0.8,
                 child: IconButton(
-                  onPressed: (){},
-                  icon: Image.asset('assets/images/home.png'),
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const screen_3(),
+                      ),
+                    );
+                  },
+                  icon: Image.asset('assets/images/Home_icon1.png'),
                 ),
               ),
               Transform.scale(
                 scale: 0.8,
                 child: IconButton(
                   onPressed: (){
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Calculator_App(),
+                        builder: (context) => const Search_button(),
                       ),
                     );
                   },
-                  icon: Image.asset('assets/images/search.png'),
+                  icon: Image.asset('assets/images/search_icon1.png'),
                 ),
               ),
               Transform.scale(
                 scale: 1.2,
                 child: IconButton(
                   onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FitnessApp(),
+                      ),
+                    );
 
                   },
-                  icon: Image.asset('assets/images/gym.png'),
+                  icon: Image.asset('assets/images/gym_icon1.png'),
                 ),
               ),
               Transform.scale(
                 scale: 0.7,
                 child: IconButton(
-                  onPressed: (){},
-                  icon: Image.asset('assets/images/restaurant.png'),
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NutritionApp(),
+                      ),
+                    );
+                  },
+                  icon: Image.asset('assets/images/res_icon1.png'),
                 ),
               ),
               Transform.scale(
                 scale: 0.7,
                 child: IconButton(
-                  onPressed: (){},
-                  icon: Image.asset('assets/images/dollar sign.png'),
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FinanceApp(),
+                      ),
+                    );
+                  },
+                  icon: Image.asset('assets/images/exp_icon1.png'),
                 ),
               ),
             ],

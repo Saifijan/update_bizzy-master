@@ -7,7 +7,9 @@ import 'package:bizzyupdated/CalendarApp.dart';
 import 'package:bizzyupdated/FinanceApp.dart';
 import 'package:bizzyupdated/FitnessApp.dart';
 import 'package:bizzyupdated/NutritionApp.dart';
+import 'package:bizzyupdated/Search_Button.dart';
 import 'package:bizzyupdated/home_screen.dart';
+import 'package:bizzyupdated/screen_3.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -153,7 +155,9 @@ class Play_Button extends StatelessWidget {
             Transform.scale(
               scale: 0.8,
               child: IconButton(
-                onPressed: (){},
+                onPressed: (){
+                  Get.off(screen_3());
+                },
                 icon: Image.asset('assets/images/home.png'),
               ),
             ),
@@ -161,7 +165,7 @@ class Play_Button extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.to(Calculator_App());
+                  Get.off(Search_button());
                 },
                 icon: Image.asset('assets/images/search.png'),
               ),
@@ -170,7 +174,7 @@ class Play_Button extends StatelessWidget {
               scale: 1.2,
               child: IconButton(
                 onPressed: (){
-                  Get.to(FitnessApp());
+                  Get.off(FitnessApp());
 
                 },
                 icon: Image.asset('assets/images/gym.png'),
@@ -180,7 +184,7 @@ class Play_Button extends StatelessWidget {
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(NutritionApp());
+                  Get.off(NutritionApp());
                 },
                 icon: Image.asset('assets/images/restaurant.png'),
               ),
@@ -189,7 +193,7 @@ class Play_Button extends StatelessWidget {
               scale: 0.7,
               child: IconButton(
                 onPressed: (){
-                  Get.to(FinanceApp());
+                  Get.off(FinanceApp());
                 },
                 icon: Image.asset('assets/images/dollar sign.png'),
               ),
