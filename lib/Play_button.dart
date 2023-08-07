@@ -140,7 +140,7 @@ class Play_Button extends StatelessWidget {
                 translation: const Offset(-0.0, -0.075),
                 child: Image.asset(
                   'assets/images/play_button.jpg', // Replace with your image asset path
-                  width: 380, // Adjust the width as needed
+                  width: Get.width, // Adjust the width as needed
                   height: 250,
 
                 ),

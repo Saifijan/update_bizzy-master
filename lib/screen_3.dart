@@ -148,7 +148,8 @@ class screen_3 extends StatelessWidget {
               child: FractionalTranslation(
                 translation: const Offset(0.0, 0.0),
                 child: Image.asset(
-                  'assets/images/home_screen.jpg', // Replace with your image asset path
+                  'assets/images/home_screen.jpg',
+                  width: Get.width,
                   fit: BoxFit.fill,
 
                 ),

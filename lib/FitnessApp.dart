@@ -96,7 +96,7 @@ class FitnessApp extends StatelessWidget {
                 translation: const Offset(-0.0, -0.27),
                 child: Image.asset(
                   'assets/images/gym_button.jpg', // Replace with your image asset path
-                  width: 400, // Adjust the width as needed
+                 width: Get.width,// Adjust the width as needed
                   height: 300,
 
                 ),
@@ -112,7 +112,7 @@ class FitnessApp extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.off(const screen_3());
+                  Get.off( screen_3());
                 },
                 icon: Image.asset('assets/images/Home_icon1.png'),
               ),

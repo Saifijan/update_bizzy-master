@@ -1,3 +1,4 @@
+import 'package:bizzyupdated/NutritionApp.dart';
 import 'package:bizzyupdated/SignUp_Screen.dart';
 import 'package:bizzyupdated/screen_3.dart';
 import 'package:bizzyupdated/widgets/elevated_button_g.dart';
@@ -23,18 +24,25 @@ class _SignInScreenState extends State<SignInScreen> {
         email: emailController.text,
         password: passwordController.text,
       );
-      // Sign-in successful, navigate to the next screen
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const screen_3(),
-        ),
-      );
+
+      // Check if sign-in was successful
+      if (userCredential.user != null) {
+        // Sign-in successful, navigate to the next screen
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => screen_3(),
+          ),
+        );
+      } else {
+        print('Sign-in failed: User is null');
+      }
     } catch (e) {
       // Sign-in failed, handle the error
       print('Sign-in failed: $e');
     }
   }
+
 
   @override
   Widget build(BuildContext context) {

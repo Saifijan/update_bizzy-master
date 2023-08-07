@@ -96,7 +96,7 @@ class FinanceApp extends StatelessWidget {
                 translation: const Offset(-0.0, -0.34),
                 child: Image.asset(
                   'assets/images/expense_pic.jpg',
-                  width: MediaQuery.of(context).size.width * 1.0, // Adjust the scale factor as needed
+                 width: Get.width, // Adjust the scale factor as needed
                   height: MediaQuery.of(context).size.height * 0.5, // Adjust the scale factor as needed
 
                 ),

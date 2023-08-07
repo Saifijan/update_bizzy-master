@@ -95,9 +95,10 @@ class NutritionApp extends StatelessWidget {
               child: FractionalTranslation(
                 translation: const Offset(-0.0, -0.18),
                 child: Image.asset(
-                  'assets/images/Nutrition_button.jpg', // Replace with your image asset path
-                  width: 400, // Adjust the width as needed
-                  height: 500,
+                  'assets/images/Nutrition_button.jpg',
+                 width: Get.width,
+                  // width: 400, // Adjust the width as needed
+                  // height: 500,
 
                 ),
               ),
@@ -112,7 +113,7 @@ class NutritionApp extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.off(const screen_3());
+                  Get.off( screen_3());
                 },
                 icon: Image.asset('assets/images/Home_icon1.png'),
               ),
