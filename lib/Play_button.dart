@@ -156,7 +156,7 @@ class Play_Button extends StatelessWidget {
               scale: 0.8,
               child: IconButton(
                 onPressed: (){
-                  Get.off(screen_3());
+                  Get.off(BottomNavigationApp());
                 },
                 icon: Image.asset('assets/images/home.png'),
               ),
